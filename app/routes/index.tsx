@@ -12,7 +12,11 @@ export default function Index() {
       <div className="hero min-h-screen bg-base-200 ">
         <div className="hero-content justify-start">
           <div className="absolute left-10 max-w-md">
-            <div className="text-5xl font-bold">Hello 👋🏻</div>
+            <div className="flex space-x-2 text-5xl">
+              <div className="font-bold">Hello</div>
+              <span className="animate-wave">👋🏻</span>
+            </div>
+
             <div className="flex max-w-md whitespace-nowrap text-5xl font-bold">
               <p className="mr-2">{`I'm`}</p>
               <Typewriter

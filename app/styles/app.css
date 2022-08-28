@@ -2219,14 +2219,6 @@ html {
   top: 0px;
 }
 
-.left-0 {
-  left: 0px;
-}
-
-.left-8 {
-  left: 2rem;
-}
-
 .left-10 {
   left: 2.5rem;
 }
@@ -2237,11 +2229,6 @@ html {
 
 .m-10 {
   margin: 2.5rem;
-}
-
-.mx-10 {
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
 }
 
 .mr-2 {
@@ -2268,12 +2255,91 @@ html {
   flex: 1 1 0%;
 }
 
+@-webkit-keyframes wave {
+  0% {
+    transform: rotate(0.0deg);
+  }
+
+  15% {
+    transform: rotate(14.0deg);
+  }
+
+  30% {
+    transform: rotate(-8.0deg);
+  }
+
+  40% {
+    transform: rotate(14.0deg);
+  }
+
+  50% {
+    transform: rotate(-4.0deg);
+  }
+
+  60% {
+    transform: rotate(10.0deg);
+  }
+
+  70% {
+    transform: rotate(0.0deg);
+  }
+
+  100% {
+    transform: rotate(0.0deg);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0.0deg);
+  }
+
+  15% {
+    transform: rotate(14.0deg);
+  }
+
+  30% {
+    transform: rotate(-8.0deg);
+  }
+
+  40% {
+    transform: rotate(14.0deg);
+  }
+
+  50% {
+    transform: rotate(-4.0deg);
+  }
+
+  60% {
+    transform: rotate(10.0deg);
+  }
+
+  70% {
+    transform: rotate(0.0deg);
+  }
+
+  100% {
+    transform: rotate(0.0deg);
+  }
+}
+
+.animate-wave {
+  -webkit-animation: wave 1.5s infinite;
+          animation: wave 1.5s infinite;
+}
+
 .flex-col {
   flex-direction: column;
 }
 
 .justify-start {
   justify-content: flex-start;
+}
+
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .whitespace-nowrap {
@@ -2286,11 +2352,6 @@ html {
 
 .border-0 {
   border-width: 0px;
-}
-
-.bg-base-100 {
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--b1) / var(--tw-bg-opacity));
 }
 
 .bg-base-200 {
@@ -2307,11 +2368,6 @@ html {
   background-color: transparent;
 }
 
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -2320,10 +2376,6 @@ html {
 .py-16 {
   padding-top: 4rem;
   padding-bottom: 4rem;
-}
-
-.text-center {
-  text-align: center;
 }
 
 .text-xl {
@@ -2336,11 +2388,6 @@ html {
   line-height: 1;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -2349,24 +2396,10 @@ html {
   text-transform: none;
 }
 
-.opacity-90 {
-  opacity: 0.9;
-}
-
 .backdrop-blur-sm {
   --tw-backdrop-blur: blur(4px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-}
-
-.backdrop-blur-md {
-  --tw-backdrop-blur: blur(12px);
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-}
-
-.focus\:border-0:focus {
-  border-width: 0px;
 }
 
 .focus\:outline-none:focus {
