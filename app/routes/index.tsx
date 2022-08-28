@@ -1,6 +1,20 @@
+import { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 
 export default function Index() {
+  const helloList = ["Hello", "你好"];
+  const [hello, setHello] = useState(helloList[0]);
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    setTimeout(() => {
+      if (index === 0) {
+        setIndex(1);
+      } else {
+        setIndex(0);
+      }
+      setHello(helloList[index]);
+    }, 3 * 1000);
+  });
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <div className="navbar sticky top-0 z-10 backdrop-blur-sm">
@@ -12,8 +26,8 @@ export default function Index() {
       <div className="hero min-h-screen bg-base-200 ">
         <div className="hero-content justify-start">
           <div className="absolute left-10 max-w-md">
-            <div className="flex space-x-2 text-5xl">
-              <div className="font-bold">Hello</div>
+            <div className="mb-4 flex space-x-2 text-5xl">
+              <div className="animate-fade font-bold">{hello}</div>
               <span className="animate-wave">👋🏻</span>
             </div>
 
