@@ -23,8 +23,8 @@ module.exports = {
         }
       },
       animation: {
-        wave: 'wave 1.5s infinite',
-        fade: 'fadeOut 3s ease-in-out infinite'
+        wave: 'wave 2.5s infinite',
+        fade: 'fadeOut 5s ease-in-out infinite'
       },
     },
   },

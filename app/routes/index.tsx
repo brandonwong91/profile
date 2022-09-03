@@ -2,18 +2,18 @@ import { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 
 export default function Index() {
-  const helloList = ["Hello", "你好"];
+  const helloList = ["Hello", "你好", "안녕하세요", "はじめまして"];
   const [hello, setHello] = useState(helloList[0]);
   const [index, setIndex] = useState(0);
   useEffect(() => {
     setTimeout(() => {
-      if (index === 0) {
-        setIndex(1);
-      } else {
+      if (index === helloList.length - 1) {
         setIndex(0);
+      } else {
+        setIndex(index + 1);
       }
       setHello(helloList[index]);
-    }, 3 * 1000);
+    }, 5 * 1000);
   });
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
