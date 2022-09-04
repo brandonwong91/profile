@@ -1,3 +1,3 @@
-export { default as Hero } from "./hero";
-export { default as NavBar } from "./navBar";
-export { default as Terminal } from "./terminal";
+export { default as Hero } from "./Hero";
+export { default as NavBar } from "./Navbar";
+export { default as Terminal } from "./Terminal";
