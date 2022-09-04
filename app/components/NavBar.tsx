@@ -1,4 +1,4 @@
-export default function NavBar() {
+export default function Navbar() {
   return (
     <div className="navbar sticky top-0 z-10 backdrop-blur-sm">
       <div className="flex-1">
