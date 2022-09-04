@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Typewriter from "typewriter-effect";
 export default function Hero() {
   const helloList = ["Hello", "你好", "안녕하세요", "はじめまして"];
-  const skillList = ["Typescript", "Golang", "Python", "C++"];
+  const skillList = ["Typescript", "Golang", "Python"];
   const toolList = [
     "React",
     "Remix",
@@ -27,7 +27,7 @@ export default function Hero() {
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content justify-start">
-        <div className="absolute left-10 max-w-md space-y-4">
+        <div className="absolute left-10 max-w-md space-y-2">
           <div className="mb-4 flex space-x-2 text-5xl">
             <div className="animate-fade font-bold">{hello}</div>
             <span className="animate-wave">👋🏻</span>
@@ -43,27 +43,33 @@ export default function Hero() {
             />
           </div>
           <p>I turn ☕️ into 👾</p>
-          {skillList.map((item) => {
-            return (
-              <div key={item} className="badge badge-primary mr-2">
-                {item}
-              </div>
-            );
-          })}
-          {toolList.map((item) => {
-            return (
-              <div key={item} className="badge badge-secondary mr-2">
-                {item}
-              </div>
-            );
-          })}
-          {frameworkList.map((item) => {
-            return (
-              <div key={item} className="badge badge-accent mr-2">
-                {item}
-              </div>
-            );
-          })}
+          <div>
+            {skillList.map((item) => {
+              return (
+                <div key={item} className="badge badge-primary mr-2">
+                  {item}
+                </div>
+              );
+            })}
+          </div>
+          <div>
+            {toolList.map((item) => {
+              return (
+                <div key={item} className="badge badge-secondary mr-2 mb-2">
+                  {item}
+                </div>
+              );
+            })}
+          </div>
+          <div>
+            {frameworkList.map((item) => {
+              return (
+                <div key={item} className="badge badge-accent mr-2 mb-2">
+                  {item}
+                </div>
+              );
+            })}
+          </div>
           <header className="group mb-16"></header>
         </div>
       </div>

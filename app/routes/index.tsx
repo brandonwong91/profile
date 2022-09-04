@@ -1,4 +1,3 @@
-import Experience from "~/components/Experience";
 import Hero from "~/components/Hero";
 import NavBar from "~/components/navBar";
 import Terminal from "~/components/Terminal";
