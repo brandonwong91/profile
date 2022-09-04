@@ -27,7 +27,7 @@ export default function Hero() {
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content justify-start">
-        <div className="absolute left-10 max-w-md space-y-2">
+        <div className="absolute left-20 max-w-md space-y-2">
           <div className="mb-4 flex space-x-2 text-5xl">
             <div className="animate-fade font-bold">{hello}</div>
             <span className="animate-wave">👋🏻</span>
@@ -43,32 +43,34 @@ export default function Hero() {
             />
           </div>
           <p>I turn ☕️ into 👾</p>
-          <div>
-            {skillList.map((item) => {
-              return (
-                <div key={item} className="badge badge-primary mr-2">
-                  {item}
-                </div>
-              );
-            })}
-          </div>
-          <div>
-            {toolList.map((item) => {
-              return (
-                <div key={item} className="badge badge-secondary mr-2 mb-2">
-                  {item}
-                </div>
-              );
-            })}
-          </div>
-          <div>
-            {frameworkList.map((item) => {
-              return (
-                <div key={item} className="badge badge-accent mr-2 mb-2">
-                  {item}
-                </div>
-              );
-            })}
+          <div className="w-72">
+            <div>
+              {skillList.map((item) => {
+                return (
+                  <div key={item} className="badge badge-primary my-1 mr-2">
+                    {item}
+                  </div>
+                );
+              })}
+            </div>
+            <div className="">
+              {toolList.map((item) => {
+                return (
+                  <div key={item} className="badge badge-secondary my-1 mr-2">
+                    {item}
+                  </div>
+                );
+              })}
+            </div>
+            <div>
+              {frameworkList.map((item) => {
+                return (
+                  <div key={item} className="badge badge-accent my-1 mr-2">
+                    {item}
+                  </div>
+                );
+              })}
+            </div>
           </div>
           <header className="group mb-16"></header>
         </div>
