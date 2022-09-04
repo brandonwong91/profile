@@ -1,6 +1,4 @@
-import Hero from "~/components/hero";
-import NavBar from "~/components/navBar";
-import Terminal from "~/components/terminal";
+import { NavBar, Hero, Terminal } from "~/components";
 
 export default function Index() {
   return (
