@@ -27,12 +27,12 @@ export default function Hero() {
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content justify-start">
-        <div className="absolute left-20 max-w-md space-y-2">
-          <div className="mb-4 flex space-x-2 text-5xl">
-            <div className="animate-fade font-bold">{hello}</div>
+        <div className="absolute left-10 max-w-md space-y-1 md:space-y-2">
+          <div className="mb-1 flex space-x-2 text-xl md:mb-4 md:text-5xl">
             <span className="animate-wave">👋🏻</span>
+            <div className="animate-fade font-bold">{hello}</div>
           </div>
-          <div className="flex max-w-md whitespace-nowrap text-5xl font-bold">
+          <div className="flex max-w-md whitespace-nowrap text-xl font-bold md:text-5xl">
             <p className="mr-2">{`I'm`}</p>
             <Typewriter
               options={{
