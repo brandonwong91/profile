@@ -44,7 +44,7 @@ export default function Hero() {
           </div>
           <p>I turn ☕️ into 👾</p>
           <div className="w-72">
-            <div>
+            <div className="animate-[fadeIn_3s_ease-in]">
               {skillList.map((item) => {
                 return (
                   <div key={item} className="badge badge-primary my-1 mr-2">
@@ -53,7 +53,7 @@ export default function Hero() {
                 );
               })}
             </div>
-            <div className="">
+            <div className="animate-[fadeIn_6s_ease-in]">
               {toolList.map((item) => {
                 return (
                   <div key={item} className="badge badge-secondary my-1 mr-2">
@@ -62,7 +62,7 @@ export default function Hero() {
                 );
               })}
             </div>
-            <div>
+            <div className="animate-[fadeIn_9s_ease-in]">
               {frameworkList.map((item) => {
                 return (
                   <div key={item} className="badge badge-accent my-1 mr-2">
