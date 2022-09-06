@@ -4,7 +4,7 @@ export default function NavBar() {
   return (
     <div className="navbar sticky top-0 z-10 backdrop-blur-sm">
       <div className="flex-1 justify-between">
-        <a className="btn btn-ghost text-xl normal-case">Home</a>
+        <div className="btn btn-ghost text-xl normal-case" onClick={()=> location.reload()}>Home</div>
         <label className="swap-rotate swap mr-4">
           <input type="checkbox" />
           <SunIcon data-set-theme="pastel" className="swap-on h-5 w-5" />
