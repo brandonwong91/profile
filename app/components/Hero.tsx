@@ -29,7 +29,10 @@ export default function Hero() {
       <div className="hero-content justify-start">
         <div className="absolute left-10 max-w-md space-y-1 md:space-y-2">
           <div className="mb-1 flex space-x-2 text-xl md:mb-4 md:text-5xl">
-            <span className="animate-wave" data-set-theme="valentine">
+            <span
+              className="animate-wave cursor-pointer"
+              data-set-theme="valentine"
+            >
               👋🏻
             </span>
             <div className="animate-fade font-bold">{hello}</div>
@@ -45,8 +48,20 @@ export default function Hero() {
             />
           </div>
           <div className="flex gap-x-1">
-            I turn <div data-set-theme="coffee">☕️</div> into{" "}
-            <div data-set-theme="retro">👾</div>
+            I turn
+            <div
+              data-set-theme="coffee"
+              className="animate-pulse cursor-pointer"
+            >
+              ☕️
+            </div>
+            into
+            <div
+              data-set-theme="retro"
+              className="animate-bounce cursor-pointer"
+            >
+              👾
+            </div>
           </div>
           <div className="w-72">
             <div className="animate-[fadeIn_3s_ease-in]">
