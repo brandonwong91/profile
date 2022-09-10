@@ -13,7 +13,7 @@ export default function Hero() {
   ];
   const frameworkList = ["Vercel", "AWS", "GCP", "Docker"];
   const [hello, setHello] = useState(helloList[0]);
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(1);
   useEffect(() => {
     setTimeout(() => {
       if (index === helloList.length - 1) {

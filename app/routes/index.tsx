@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { themeChange } from "theme-change";
-import { Hero, NavBar, Terminal } from "~/components";
+import { Experience, Hero, NavBar, Terminal } from "~/components";
 
 export default function Index() {
   useEffect(() => {
@@ -11,7 +11,7 @@ export default function Index() {
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <NavBar />
       <Hero />
-      {/* <Experience /> */}
+      <Experience />
       <Terminal />
     </div>
   );
