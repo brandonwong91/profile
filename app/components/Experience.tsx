@@ -72,9 +72,9 @@ export default function Experience() {
   ];
   const [selected, setSelected] = useState(companies[0]);
   return (
-    <div className="bg-base-700 hero flex min-h-[50vh] justify-center">
+    <div className="bg-base-700 hero flex min-h-[100vh] justify-center">
       <div className="sm:flex-col md:flex md:flex-row">
-        <ul className="rounded-0 bg-base-100 sm:menu-horizontal sm:overflow-scroll md:menu md:w-56">
+        <ul className="rounded-0 bg-base-100 sm:menu md:menu md:w-56">
           {companies.map((company) => {
             return (
               <li

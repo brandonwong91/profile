@@ -2,3 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+.ground {
+  --left: 0;
+  left: calc(var(--left) * 1%)
+}
+
+.dino {
+  --bottom: 0;
+  bottom: calc(var(--bottom) * 1%);
+}
+
+.cactus {
+  position: absolute;
+  left: calc(var(--left) * 1%);
+  height: 5%;
+  bottom: 0;
+}
+
+.world {
+  
+}

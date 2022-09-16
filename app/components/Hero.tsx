@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import Typewriter from "typewriter-effect";
-export default function Hero() {
+interface HeroProps {
+  showGame: boolean;
+  setShowGame: (val: boolean) => void;
+}
+export default function Hero({ setShowGame, showGame }: HeroProps) {
   const helloList = ["Hello", "你好", "안녕하세요", "はじめまして"];
   const skillList = ["Typescript", "Golang", "Python"];
   const toolList = [
@@ -25,8 +29,8 @@ export default function Hero() {
     }, 5 * 1000);
   });
   return (
-    <div className="hero min-h-screen bg-base-200">
-      <div className="hero-content justify-start">
+    <div className="world hero min-h-screen bg-base-200">
+      <div className="hero-content justify-start ">
         <div className="absolute left-10 max-w-md space-y-1 md:space-y-2">
           <div className="mb-1 flex space-x-2 text-xl md:mb-4 md:text-5xl">
             <span
@@ -59,6 +63,7 @@ export default function Hero() {
             <div
               data-set-theme="retro"
               className="animate-bounce cursor-pointer"
+              onClick={() => setShowGame(!showGame)}
             >
               👾
             </div>
