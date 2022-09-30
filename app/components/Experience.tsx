@@ -72,14 +72,15 @@ export default function Experience() {
   ];
   const [selected, setSelected] = useState(companies[0]);
   return (
-    <div className="bg-base-700 hero flex min-h-[100vh] justify-center">
-      <div className="sm:flex-col md:flex md:flex-row">
-        <ul className="rounded-0 bg-base-100 sm:menu md:menu md:w-56">
+    <div className="bg-base-700 xs:ml-4 hero flex min-h-[100vh] justify-center">
+      <div className="md:flex md:flex-row">
+        <ul className="menu grid rounded-lg bg-base-100 sm:grid-cols-3 md:w-56 md:grid-cols-1">
           {companies.map((company) => {
             return (
               <li
                 className={clsx("hover-bordered", {
-                  "bg-secondary": selected.name === company.name,
+                  "bg-gradient-to-tr from-primary to-secondary":
+                    selected.name === company.name,
                 })}
                 key={company.name}
                 onClick={() => setSelected(company)}
@@ -89,7 +90,7 @@ export default function Experience() {
             );
           })}
         </ul>
-        <div className="card image-full w-96 bg-base-100 shadow-xl">
+        <div className="card image-full h-80 bg-base-100 shadow-xl sm:w-80 md:w-96">
           <figure>
             <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
           </figure>

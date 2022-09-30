@@ -234,9 +234,9 @@ export default function Game() {
 
   return (
     <div className="world">
-      <div className="score absolute bottom-0 right-0 mb-16 mr-4 text-xl">
+      {/* <div className="score absolute bottom-0 right-0 mb-16 mr-4 text-xl">
         {0}
-      </div>
+      </div> */}
       <img
         src="img/ground.png"
         alt=""
