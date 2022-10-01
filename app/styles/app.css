@@ -2995,12 +2995,24 @@ body[dir="rtl"] .checkbox:checked,
   height: 1.25rem;
 }
 
+.h-full {
+  height: 100%;
+}
+
+.h-96 {
+  height: 24rem;
+}
+
 .min-h-\[100vh\] {
   min-height: 100vh;
 }
 
 .min-h-screen {
   min-height: 100vh;
+}
+
+.min-h-full {
+  min-height: 100%;
 }
 
 .w-\[100\%\] {
@@ -3475,6 +3487,10 @@ body[dir="rtl"] .checkbox:checked,
     margin-top: 2.5rem;
   }
 
+  .sm\:mb-10 {
+    margin-bottom: 2.5rem;
+  }
+
   .sm\:h-80 {
     height: 20rem;
   }
@@ -3495,6 +3511,46 @@ body[dir="rtl"] .checkbox:checked,
 
   .md\:flex {
     display: flex;
+  }
+
+  .md\:h-full {
+    height: 100%;
+  }
+
+  .md\:h-\[36rem\] {
+    height: 36rem;
+  }
+
+  .md\:h-\[26rem\] {
+    height: 26rem;
+  }
+
+  .md\:h-\[20rem\] {
+    height: 20rem;
+  }
+
+  .md\:h-\[22rem\] {
+    height: 22rem;
+  }
+
+  .md\:h-\[21rem\] {
+    height: 21rem;
+  }
+
+  .md\:h-\[21\.5rem\] {
+    height: 21.5rem;
+  }
+
+  .md\:min-h-full {
+    min-height: 100%;
+  }
+
+  .md\:min-h-\[20rem\] {
+    min-height: 20rem;
+  }
+
+  .md\:min-h-\[21rem\] {
+    min-height: 21rem;
   }
 
   .md\:w-48 {
