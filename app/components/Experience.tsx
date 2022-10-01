@@ -72,14 +72,18 @@ export default function Experience() {
   ];
   const [selected, setSelected] = useState(companies[0]);
   return (
-    <div className="bg-base-700 xs:ml-4 hero flex min-h-[100vh] justify-center">
+    <>
+    <div className="bg-base-700 xs:ml-4 hero flex flex-col min-h-[100vh] justify-center">
+    <h1 className="sm:mt-10 text-6xl mb-10 self-center text-transparent bg-clip-text bg-gradient-to-tr from-primary to-secondary">
+      {`Experiences`}
+    </h1>
       <div className="md:flex md:flex-row">
-        <ul className="menu grid rounded-lg bg-base-100 sm:grid-cols-3 md:w-56 md:grid-cols-1">
+        <ul className="menu grid bg-base-100 sm:grid-cols-3 md:w-48 md:grid-cols-1">
           {companies.map((company) => {
             return (
               <li
                 className={clsx("hover-bordered", {
-                  "bg-gradient-to-tr from-primary to-secondary":
+                  "bg-gradient-to-tr from-primary to-accent":
                     selected.name === company.name,
                 })}
                 key={company.name}
@@ -90,15 +94,16 @@ export default function Experience() {
             );
           })}
         </ul>
-        <div className="card image-full h-80 bg-base-100 shadow-xl sm:w-80 md:w-96">
-          <figure>
+        <div className="card image-full h-84 bg-base-100 shadow-xl sm:w-80 sm:h-80 md:w-96">
+          {/* <figure>
             <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
-          </figure>
+          </figure> */}
           <div className="card-body">
             <h2 className="card-title">{`${selected.role} @ ${selected.name}`}</h2>
             <p>{`${selected.term}`}</p>
-            {selected.highlights && (
-              <ul className="ml-4 list-disc">
+            <div className="mr-4">
+              {selected.highlights && (
+              <ul className="mr-4 list-disc">
                 {selected.highlights.map((item) => (
                   <li className="my-2 text-xs" key={item}>
                     {item}
@@ -106,6 +111,10 @@ export default function Experience() {
                 ))}
               </ul>
             )}
+            </div>
+            
+        
+            
             <div className="flex gap-x-1">
               {selected.skills &&
                 selected.skills.map((item) => (
@@ -118,5 +127,7 @@ export default function Experience() {
         </div>
       </div>
     </div>
+    </>
+    
   );
 }
