@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { themeChange } from "theme-change";
-import { Experience, Hero, NavBar, Terminal } from "~/components";
+import { Experiences, Hero, NavBar, Terminal, Quotes } from "~/components";
 import Game from "~/components/Game";
 
 export default function Index() {
@@ -13,7 +13,8 @@ export default function Index() {
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <NavBar />
       <Hero setShowGame={setShowGame} showGame={showGame} />
-      <Experience />
+      <Experiences />
+      <Quotes />
       {showGame && <Game />}
     </div>
   );

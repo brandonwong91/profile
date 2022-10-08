@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useState } from "react";
 
-export default function Experience() {
+export default function Experiences() {
   const companies = [
     {
       name: "Trustana",
@@ -73,7 +73,7 @@ export default function Experience() {
   const [selected, setSelected] = useState(companies[0]);
   return (
     <>
-      <div className="bg-base-700 xs:ml-4 hero flex flex-col min-h-[100vh] justify-center sm:mb-10">
+      <div className="bg-base-100 xs:ml-4 hero flex flex-col min-h-[100vh] justify-center sm:mb-10">
         <h1 className="sm:mt-10 text-6xl mb-10 self-center text-transparent bg-clip-text bg-gradient-to-tr from-primary to-secondary">
           {`Experiences`}
         </h1>
@@ -94,7 +94,7 @@ export default function Experience() {
               );
             })}
           </ul>
-          <div className="card image-full bg-base-100 shadow-xl sm:w-80 sm:h-80 md:w-96 md:min-h-full">
+          <div className="card image-full bg-base-100 shadow-xl sm:w-80 sm:h-80 md:w-96 md:min-h-[21.5rem]">
             {/* <figure>
             <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
           </figure> */}
