@@ -1,5 +1,5 @@
 import clsx from "clsx"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function Quotes() {
 
@@ -25,7 +25,7 @@ export default function Quotes() {
       </div>
     },
     {
-      text: "Keep it simple, stupid",
+      text: "Keep it simple, stupid.",
       by: "U.S. Navy",
       icon: <div className="w-4">
         <img
@@ -33,7 +33,17 @@ export default function Quotes() {
           alt={""}
         />
       </div>
-    }
+    },
+    {
+      text: "If you can't explain it simply, you don't understand it well enough.",
+      by: "Albert Einstein",
+      icon: <div className="w-4">
+        <img
+          src={`img/icons8-albert-einstein-48.png`}
+          alt={""}
+        />
+      </div>
+    },
   ]
   const maxQuotes = quotes.length - 1
   const [selected, setSelected] = useState(0)
@@ -44,7 +54,11 @@ export default function Quotes() {
       setSelected(selected + 1);
     }
   }
-  setTimeout(navigation, 5 * 1000)
+  let timer: any
+  useEffect(() => {
+    window.clearInterval(timer)
+    timer = window.setInterval(navigation, 5 * 1000)
+  }, [timer, selected])
 
   return (
     <div className="bg-base-200 xs:ml-4 hero flex flex-col min-h-[100vh] justify-center sm:mb-10">
@@ -52,7 +66,7 @@ export default function Quotes() {
         <h1 className="sm:ml-12 md:ml-0 sm:mt-10 text-6xl mb-10 self-center text-transparent bg-clip-text bg-gradient-to-tr from-primary to-secondary">
           {`Favorite Quotes`}
         </h1>
-        <div className="flex flex-col">
+        <div className="flex flex-col absolute">
           <div className="self-center mt-2 flex flex-row cursor-pointer gap-x-1">
             {quotes.map((quote, index) => {
               return (
