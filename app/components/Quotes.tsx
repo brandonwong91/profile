@@ -57,29 +57,29 @@ export default function Quotes() {
       setSelected(selected + 1);
     }
   }
-  let timer: any
-  let touchStartX: number
-  let touchEndX: number
+  // let timer: any
+  // let touchStartX: number
+  // let touchEndX: number
 
-  function checkDirection() {
-    if (touchEndX < touchStartX) setSelected(selected === 0 ? maxQuotes : selected - 1);
-    if (touchEndX > touchStartX) setSelected(selected === maxQuotes ? 0 : selected + 1)
-  }
+  // function checkDirection() {
+  //   if (touchEndX < touchStartX) setSelected(selected === 0 ? maxQuotes : selected - 1);
+  //   if (touchEndX > touchStartX) setSelected(selected === maxQuotes ? 0 : selected + 1)
+  // }
 
-  useEffect(() => {
-    // window.clearInterval(timer)
-    // timer = window.setInterval(navigation, 5 * 1000)
-    document.addEventListener('touchstart', e => {
-      touchStartX = e.changedTouches[0].screenX
-    })
+  // useEffect(() => {
+  //   // window.clearInterval(timer)
+  //   // timer = window.setInterval(navigation, 5 * 1000)
+  //   document.addEventListener('touchstart', e => {
+  //     touchStartX = e.changedTouches[0].screenX
+  //   })
 
-    document.addEventListener('touchend', e => {
-      touchEndX = e.changedTouches[0].screenX
-      checkDirection()
-    })
+  //   document.addEventListener('touchend', e => {
+  //     touchEndX = e.changedTouches[0].screenX
+  //     checkDirection()
+  //   })
 
 
-  }, [selected])
+  // }, [selected])
 
   return (
     <div className="bg-base-200 hero flex flex-col min-h-[100vh] justify-center sm:mb-10">
