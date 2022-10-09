@@ -15,6 +15,7 @@ export default function Index() {
       <Hero setShowGame={setShowGame} showGame={showGame} />
       <Experiences />
       <Quotes />
+      <Terminal />
       {showGame && <Game />}
     </div>
   );
