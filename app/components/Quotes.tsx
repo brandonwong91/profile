@@ -55,10 +55,26 @@ export default function Quotes() {
     }
   }
   let timer: any
+  let touchStartX: number
+  let touchEndX: number
+
+  function checkDirection() {
+    if (touchEndX < touchStartX) setSelected(selected === 0 ? maxQuotes : selected - 1);
+    if (touchEndX > touchStartX) setSelected(selected === maxQuotes ? 0 : selected + 1)
+  }
+
   useEffect(() => {
     window.clearInterval(timer)
     timer = window.setInterval(navigation, 5 * 1000)
-  }, [timer, selected])
+    document.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX
+    })
+
+    document.addEventListener('touchend', e => {
+      touchEndX = e.changedTouches[0].screenX
+      checkDirection()
+    })
+  }, [selected])
 
   return (
     <div className="bg-base-200 xs:ml-4 hero flex flex-col min-h-[100vh] justify-center sm:mb-10">
