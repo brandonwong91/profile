@@ -10,7 +10,6 @@ export const action: ActionFunction = async ({ request }) => {
   const formData = await request.formData();
   const terminalInput = formData.get("input")
   return json({ terminalInput })
-
 }
 
 export default function Index() {
@@ -26,7 +25,7 @@ export default function Index() {
       <Hero setShowGame={setShowGame} showGame={showGame} />
       <Experiences />
       <Quotes />
-      <Terminal terminalInput={actionData ? actionData.terminalInput : "Enter below"} />
+      <Terminal terminalInput={actionData ? actionData.terminalInput : "--help for more"} />
       {showGame && <Game />}
     </div>
   );

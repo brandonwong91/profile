@@ -2,24 +2,17 @@ import { Form } from "@remix-run/react";
 import { useEffect, useState } from "react";
 
 interface TerminalProps {
-  terminalInput: string;
+  terminalInput: any;
 }
 
 export default function Terminal({
   terminalInput,
 }: TerminalProps) {
   const [userInput, setUserInput] = useState<any[]>([])
+  const [userCursorCount, setUserCursorCount] = useState(1)
   useEffect(() => {
     setUserInput([...userInput, terminalInput]);
   }, [terminalInput])
-  useEffect(() => {
-    const node = (document.getElementById("input") as HTMLInputElement);
-    node?.addEventListener("keydown", function (event) {
-      if (event.key === "Enter") {
-        node.value = ""
-      };
-    })
-  })
   return (
     <div className="bg-base-100 hero min-h-screen">
       <div className="mockup-code m-10 border bg-base-200 ">
@@ -31,15 +24,43 @@ export default function Terminal({
             <code>{input}</code>
           </pre>)
         })}
-        <Form method="post" action={"/?index"}>
+        <Form id="userInputForm" method="post" action={"/?index"}>
           <div className="flex flex-row">
             <pre data-prefix=">">
               <input
+                id="userInput"
                 name="input"
                 className="border-0 bg-transparent focus:outline-none"
+                onKeyUp={(e) => {
+                  const input = (document.getElementById("userInput") as HTMLInputElement)
+                  if (e.key === "Enter") {
+                    if (input.value === "--help" || input.value === "-h") {
+                      setUserInput([...userInput, "Nothing yet! 🤓"])
+                    }
+                    setUserCursorCount(1)
+                    input.focus()
+                    input.select()
+                  }
+                  if (e.key === "ArrowUp") {
+                    if (userCursorCount < userInput.length - 2) {
+                      setUserCursorCount(userCursorCount + 1)
+                    }
+                    input.value = userInput[userInput.length - 1 - userCursorCount]
+                    input.focus()
+                    input.select()
+                  }
+                  if (e.key === "ArrowDown") {
+                    if (userCursorCount > 0) {
+                      setUserCursorCount(userCursorCount - 1)
+                    }
+                    input.value = userInput[userInput.length - 1 - userCursorCount]
+                    input.focus()
+                    input.select()
+                  }
+                }}
               />
             </pre>
-            <button type="submit" className="kbd btn-accent mr-4">Enter</button>
+            <button type="submit" className="kbd btn-accent mr-4 h-2">Enter</button>
           </div>
         </Form>
       </div>
