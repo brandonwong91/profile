@@ -49,26 +49,26 @@ export default function Quotes() {
       setSelected(selected + 1);
     }
   };
-  let touchStartX: number;
-  let touchEndX: number;
+  // let touchStartX: number;
+  // let touchEndX: number;
 
-  function checkDirection() {
-    if (touchEndX < touchStartX)
-      setSelected(selected === 0 ? maxQuotes : selected - 1);
-    if (touchEndX > touchStartX)
-      setSelected(selected === maxQuotes ? 0 : selected + 1);
-  }
+  // function checkDirection() {
+  //   if (touchEndX < touchStartX)
+  //     setSelected(selected === 0 ? maxQuotes : selected - 1);
+  //   if (touchEndX > touchStartX)
+  //     setSelected(selected === maxQuotes ? 0 : selected + 1);
+  // }
 
   useEffect(() => {
     const timer = setTimeout(navigation, 5 * 1000);
-    document.addEventListener("touchstart", (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-    });
+    // document.addEventListener("touchstart", (e) => {
+    //   touchStartX = e.changedTouches[0].screenX;
+    // });
 
-    document.addEventListener("touchend", (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      checkDirection();
-    });
+    // document.addEventListener("touchend", (e) => {
+    //   touchEndX = e.changedTouches[0].screenX;
+    //   checkDirection();
+    // });
     return () => clearTimeout(timer);
   }, [selected]);
 
