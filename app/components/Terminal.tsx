@@ -19,14 +19,18 @@ export default function Terminal({ terminalInput }: TerminalProps) {
   return (
     <div className="hero min-h-screen bg-base-100">
       <div className="mockup-code m-10 border bg-base-200">
-        <div className="max-h-80 overflow-y-auto">
+        <div className="max-h-80 snap-y snap-proximity overflow-y-auto">
           <pre data-prefix="~">
             <code>Hello! Talk to me!</code>
           </pre>
           {userInput.length > 0 &&
             userInput.map((input, index) => {
               return (
-                <pre key={`${index}`} data-prefix={`${input.prefix}`}>
+                <pre
+                  key={`${index}`}
+                  data-prefix={`${input.prefix}`}
+                  className="snap-start"
+                >
                   <code>{input.text}</code>
                 </pre>
               );

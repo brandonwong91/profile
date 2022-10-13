@@ -22,17 +22,27 @@ export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <NavBar />
-      <Hero setShowGame={setShowGame} showGame={showGame} />
-      <Experiences />
-      <Quotes />
-      <Terminal
-        terminalInput={
-          actionData
-            ? { prefix: ">", text: actionData.terminalInput }
-            : { prefix: "~", text: "--help for more" }
-        }
-      />
-      {showGame && <Game />}
+      <div className="snap-y snap-proximity">
+        <div className="snap-center snap-always">
+          <Hero setShowGame={setShowGame} showGame={showGame} />
+        </div>
+        <div className="snap-start snap-always">
+          <Experiences />
+        </div>
+        <div className="snap-start snap-always">
+          <Quotes />
+        </div>
+        <div className="snap-start snap-always">
+          <Terminal
+            terminalInput={
+              actionData
+                ? { prefix: ">", text: actionData.terminalInput }
+                : { prefix: "~", text: "--help for more" }
+            }
+          />
+        </div>
+        {showGame && <Game />}
+      </div>
     </div>
   );
 }

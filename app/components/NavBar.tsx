@@ -2,7 +2,7 @@ import { MoonIcon, SunIcon } from "@heroicons/react/outline";
 
 export default function NavBar() {
   return (
-    <div className="navbar sticky top-0 z-10 backdrop-blur-sm">
+    <div className="navbar sticky top-0 z-[9000] backdrop-blur-sm">
       <div className="flex-1 justify-between">
         <div
           className="btn btn-ghost text-xl normal-case"

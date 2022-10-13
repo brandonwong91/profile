@@ -75,7 +75,7 @@ export default function Quotes() {
   return (
     <div className="hero flex min-h-[100vh] flex-col justify-center bg-base-200 sm:mb-10">
       <div>
-        <h1 className="hero-content bg-gradient-to-tr from-primary to-secondary bg-clip-text text-6xl text-transparent">
+        <h1 className="hero-content bg-gradient-to-tr from-primary to-secondary bg-clip-text text-6xl text-transparent sm:text-5xl">
           {`Favorite Quotes`}
         </h1>
         <div className="hero-content flex flex-col">
@@ -107,11 +107,11 @@ export default function Quotes() {
             >
               ❮
             </div>
-            <div className="indicator flex h-24 flex-col">
+            <div className="indicator flex h-36 flex-col justify-evenly">
               <div className="indicator-item indicator-start indicator-top ml-6 w-8 opacity-50">
                 <img src={`img/icons8-quote-left-50.png`} alt={""} />
               </div>
-              <div className="w-[21rem] px-4 pt-4 italic">
+              <div className="w-[20rem] px-4 pt-4 italic">
                 {quotes[selected]?.text}
               </div>
               <div className="justify-end pr-4 text-end text-sm">
