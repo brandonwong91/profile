@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 export default function Quotes() {
   const quotes = [
     {
-      text: "If I am repeating it, I will automate it.",
+      text: "If I am repeating it, I automating it.",
       by: "Brandon",
       icon: (
         <div className="w-4">
@@ -36,6 +36,15 @@ export default function Quotes() {
       icon: (
         <div className="w-4">
           <img src={`img/icons8-albert-einstein-48.png`} alt={""} />
+        </div>
+      ),
+    },
+    {
+      text: "What do we say to the God of death? Not today.",
+      by: "Syrio Forel / Arya Stark",
+      icon: (
+        <div className="w-4">
+          <img src={`img/icons8-game-of-thrones-32.png`} alt={""} />
         </div>
       ),
     },
