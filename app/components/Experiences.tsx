@@ -73,8 +73,8 @@ export default function Experiences() {
   const [selected, setSelected] = useState(companies[0]);
   return (
     <>
-      <div className="bg-base-100 xs:ml-4 hero flex flex-col min-h-[100vh] justify-center sm:mb-10">
-        <h1 className="sm:mt-10 text-6xl mb-10 self-center text-transparent bg-clip-text bg-gradient-to-tr from-primary to-secondary">
+      <div className="xs:ml-4 hero flex min-h-[100vh] flex-col justify-center bg-base-100 sm:mb-10">
+        <h1 className="mb-10 self-center bg-gradient-to-tr from-primary to-secondary bg-clip-text text-6xl text-transparent sm:mt-10">
           {`Experiences`}
         </h1>
         <div className="md:flex md:flex-row">
@@ -94,7 +94,7 @@ export default function Experiences() {
               );
             })}
           </ul>
-          <div className="card image-full bg-base-100 shadow-xl sm:w-80 sm:h-80 md:w-96 md:min-h-[21.5rem]">
+          <div className="card image-full bg-base-100 shadow-xl sm:h-80 sm:w-80 md:min-h-[21.5rem] md:w-96">
             {/* <figure>
             <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
           </figure> */}
@@ -125,6 +125,5 @@ export default function Experiences() {
         </div>
       </div>
     </>
-
   );
 }
