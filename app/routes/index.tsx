@@ -8,9 +8,9 @@ import Game from "~/components/Game";
 
 export const action: ActionFunction = async ({ request }) => {
   const formData = await request.formData();
-  const terminalInput = formData.get("input")
-  return json({ terminalInput })
-}
+  const terminalInput = formData.get("input");
+  return json({ terminalInput });
+};
 
 export default function Index() {
   const actionData = useActionData();
@@ -25,7 +25,13 @@ export default function Index() {
       <Hero setShowGame={setShowGame} showGame={showGame} />
       <Experiences />
       <Quotes />
-      <Terminal terminalInput={actionData ? actionData.terminalInput : "--help for more"} />
+      <Terminal
+        terminalInput={
+          actionData
+            ? { prefix: ">", text: actionData.terminalInput }
+            : { prefix: "~", text: "--help for more" }
+        }
+      />
       {showGame && <Game />}
     </div>
   );

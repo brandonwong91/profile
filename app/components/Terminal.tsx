@@ -2,28 +2,34 @@ import { Form } from "@remix-run/react";
 import { useEffect, useState } from "react";
 
 interface TerminalProps {
-  terminalInput: any;
+  terminalInput: TerminalInput;
 }
 
-export default function Terminal({
-  terminalInput,
-}: TerminalProps) {
-  const [userInput, setUserInput] = useState<any[]>([])
-  const [userCursorCount, setUserCursorCount] = useState(1)
+interface TerminalInput {
+  prefix: string;
+  text: string;
+}
+
+export default function Terminal({ terminalInput }: TerminalProps) {
+  const [userInput, setUserInput] = useState<TerminalInput[]>([]);
+  const [userCursorCount, setUserCursorCount] = useState(1);
   useEffect(() => {
     setUserInput([...userInput, terminalInput]);
-  }, [terminalInput])
+  }, [terminalInput.text]);
   return (
-    <div className="bg-base-100 hero min-h-screen">
+    <div className="hero min-h-screen bg-base-100">
       <div className="mockup-code m-10 border bg-base-200 ">
         <pre data-prefix="~">
           <code>Hello! Talk to me!</code>
         </pre>
-        {userInput.length > 0 && userInput.map((input, index) => {
-          return (<pre key={`${index}`} data-prefix=">">
-            <code>{input}</code>
-          </pre>)
-        })}
+        {userInput.length > 0 &&
+          userInput.map((input, index) => {
+            return (
+              <pre key={`${index}`} data-prefix={`${input.prefix}`}>
+                <code>{input.text}</code>
+              </pre>
+            );
+          })}
         <Form id="userInputForm" method="post" action={"/?index"}>
           <div className="flex flex-row">
             <pre data-prefix=">">
@@ -32,38 +38,47 @@ export default function Terminal({
                 name="input"
                 className="border-0 bg-transparent focus:outline-none"
                 onKeyUp={(e) => {
-                  const input = (document.getElementById("userInput") as HTMLInputElement)
+                  const input = document.getElementById(
+                    "userInput"
+                  ) as HTMLInputElement;
                   if (e.key === "Enter") {
                     if (input.value === "--help" || input.value === "-h") {
-                      setUserInput([...userInput, "Nothing yet! 🤓"])
+                      setUserInput([
+                        ...userInput,
+                        { prefix: "~", text: "Nothing yet! 🤓" },
+                      ]);
                     }
-                    setUserCursorCount(1)
-                    input.focus()
-                    input.select()
+                    setUserCursorCount(1);
+                    input.focus();
+                    input.select();
                   }
                   if (e.key === "ArrowUp") {
                     if (userCursorCount < userInput.length - 2) {
-                      setUserCursorCount(userCursorCount + 1)
+                      setUserCursorCount(userCursorCount + 1);
                     }
-                    input.value = userInput[userInput.length - 1 - userCursorCount]
-                    input.focus()
-                    input.select()
+                    input.value =
+                      userInput[userInput.length - 1 - userCursorCount].text;
+                    input.focus();
+                    input.select();
                   }
                   if (e.key === "ArrowDown") {
                     if (userCursorCount > 0) {
-                      setUserCursorCount(userCursorCount - 1)
+                      setUserCursorCount(userCursorCount - 1);
                     }
-                    input.value = userInput[userInput.length - 1 - userCursorCount]
-                    input.focus()
-                    input.select()
+                    input.value =
+                      userInput[userInput.length - 1 - userCursorCount].text;
+                    input.focus();
+                    input.select();
                   }
                 }}
               />
             </pre>
-            <button type="submit" className="kbd btn-accent mr-4 h-2">Enter</button>
+            <button type="submit" className="kbd btn-accent mr-4 h-2">
+              Enter
+            </button>
           </div>
         </Form>
       </div>
-    </div >
+    </div>
   );
 }
