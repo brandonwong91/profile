@@ -19,19 +19,41 @@ export default function Index() {
     // 👆 false parameter is required for react project
   }, []);
   const [showGame, setShowGame] = useState(false);
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("customShow");
+        } else {
+          entry.target.classList.remove("customShow");
+        }
+      });
+    });
+    const hiddenElements = document.querySelectorAll(".customHidden");
+    hiddenElements.forEach((element) => observer.observe(element));
+  });
+
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <NavBar />
-      <Hero setShowGame={setShowGame} showGame={showGame} />
-      <Experiences />
-      <Quotes />
-      <Terminal
-        terminalInput={
-          actionData
-            ? { prefix: ">", text: actionData.terminalInput }
-            : { prefix: "~", text: "--help for more" }
-        }
-      />
+      <div className="customHidden">
+        <Hero setShowGame={setShowGame} showGame={showGame} />
+      </div>
+      <div className="customHidden">
+        <Experiences />
+      </div>
+      <div className="customHidden">
+        <Quotes />
+      </div>
+      <div className="customHidden">
+        <Terminal
+          terminalInput={
+            actionData
+              ? { prefix: ">", text: actionData.terminalInput }
+              : { prefix: "~", text: "--help for more" }
+          }
+        />
+      </div>
       {showGame && <Game />}
     </div>
   );
