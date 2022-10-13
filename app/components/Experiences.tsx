@@ -82,7 +82,7 @@ export default function Experiences() {
             {companies.map((company) => {
               return (
                 <li
-                  className={clsx("hover-bordered", {
+                  className={clsx({
                     "bg-gradient-to-tr from-primary to-accent":
                       selected.name === company.name,
                   })}
