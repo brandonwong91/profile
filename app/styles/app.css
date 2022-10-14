@@ -3427,6 +3427,10 @@ body[dir="rtl"] .checkbox:checked,
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-12 {
   height: 3rem;
 }
@@ -3719,9 +3723,9 @@ body[dir="rtl"] .checkbox:checked,
   }
 }
 
-.animate-\[fadeIn_3s_ease-in\] {
-  -webkit-animation: fadeIn 3s ease-in;
-          animation: fadeIn 3s ease-in;
+.animate-\[fadeIn_4s_ease-in\] {
+  -webkit-animation: fadeIn 4s ease-in;
+          animation: fadeIn 4s ease-in;
 }
 
 @keyframes fadeIn {
@@ -3750,9 +3754,9 @@ body[dir="rtl"] .checkbox:checked,
   }
 }
 
-.animate-\[fadeIn_6s_ease-in\] {
-  -webkit-animation: fadeIn 6s ease-in;
-          animation: fadeIn 6s ease-in;
+.animate-\[fadeIn_8s_ease-in\] {
+  -webkit-animation: fadeIn 8s ease-in;
+          animation: fadeIn 8s ease-in;
 }
 
 @keyframes fadeIn {
@@ -3781,9 +3785,9 @@ body[dir="rtl"] .checkbox:checked,
   }
 }
 
-.animate-\[fadeIn_9s_ease-in\] {
-  -webkit-animation: fadeIn 9s ease-in;
-          animation: fadeIn 9s ease-in;
+.animate-\[fadeIn_12s_ease-in\] {
+  -webkit-animation: fadeIn 12s ease-in;
+          animation: fadeIn 12s ease-in;
 }
 
 .cursor-pointer {
@@ -4014,11 +4018,13 @@ body[dir="rtl"] .checkbox:checked,
 .customHidden {
   opacity: 0;
   transition: all 3s;
+  transform: translateY(10vh);
   filter: blur(5px);
 }
 
 .customShow {
   opacity: 1;
+  transform: translateY(0);
   filter: blur(0);
 }
 

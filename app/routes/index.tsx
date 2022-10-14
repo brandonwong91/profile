@@ -45,7 +45,7 @@ export default function Index() {
       <div className="customHidden">
         <Quotes />
       </div>
-      <div className="customHidden">
+      <div className="customHidden" id={"terminal"}>
         <Terminal
           terminalInput={
             actionData

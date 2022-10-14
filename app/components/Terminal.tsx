@@ -17,7 +17,7 @@ export default function Terminal({ terminalInput }: TerminalProps) {
     setUserInput([...userInput, terminalInput]);
   }, [terminalInput.text]);
   return (
-    <div className="hero min-h-screen bg-base-100" id="terminal">
+    <div className="hero min-h-screen bg-base-100">
       <div className="mockup-code m-10 border bg-primary text-primary-content">
         <div className="max-h-80 snap-y snap-proximity overflow-y-auto">
           <pre data-prefix="~">
@@ -35,7 +35,7 @@ export default function Terminal({ terminalInput }: TerminalProps) {
                 </pre>
               );
             })}
-          <Form id="userInputForm" method="post" action={"/?index#terminal"}>
+          <Form id="userInputForm" method="post" action={"/?index"}>
             <div className="flex flex-row">
               <pre data-prefix=">">
                 <input
@@ -77,9 +77,15 @@ export default function Terminal({ terminalInput }: TerminalProps) {
                     }
                   }}
                 />
+                <a href={"terminal"} hidden>
+                  {}
+                </a>
               </pre>
               <button type="submit" className="kbd btn-accent mr-4 h-2">
                 Enter
+                <a href={"terminal"} hidden>
+                  {}
+                </a>
               </button>
             </div>
           </Form>
