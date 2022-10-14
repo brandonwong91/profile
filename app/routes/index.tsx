@@ -36,16 +36,10 @@ export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <NavBar />
-      <div className="customHidden">
-        <Hero setShowGame={setShowGame} showGame={showGame} />
-      </div>
-      <div className="customHidden">
-        <Experiences />
-      </div>
-      <div className="customHidden">
-        <Quotes />
-      </div>
-      <div className="customHidden" id={"terminal"}>
+      <Hero setShowGame={setShowGame} showGame={showGame} />
+      <Experiences />
+      <Quotes />
+      <div id={"terminal"}>
         <Terminal
           terminalInput={
             actionData

@@ -18,7 +18,7 @@ export default function Terminal({ terminalInput }: TerminalProps) {
   }, [terminalInput.text]);
   return (
     <div className="hero min-h-screen bg-base-100">
-      <div className="mockup-code m-10 border bg-primary text-primary-content">
+      <div className="customHidden mockup-code m-10 border bg-primary text-primary-content">
         <div className="max-h-80 snap-y snap-proximity overflow-y-auto">
           <pre data-prefix="~">
             <code>Hello! Talk to me!</code>
