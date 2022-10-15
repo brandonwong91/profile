@@ -1,4 +1,4 @@
-import { MoonIcon, SunIcon } from "@heroicons/react/outline";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 export default function NavBar() {
   return (
@@ -12,10 +12,12 @@ export default function NavBar() {
             <img src={`img/favicon.ico`} alt={""} />
           </div>
         </div>
-        <label className="swap swap-rotate mr-4">
-          <input type="checkbox" />
-          <SunIcon data-set-theme="pastel" className="swap-on h-5 w-5" />
-          <MoonIcon data-set-theme="dark" className="swap-off h-5 w-5" />
+        <label
+          htmlFor="my-drawer-4"
+          className="btn swap btn-ghost drawer-button hover:swap-rotate"
+        >
+          <MenuIcon className="swap-off h-5 w-5" />
+          <XIcon className="swap-on h-5 w-5" />
         </label>
       </div>
     </div>

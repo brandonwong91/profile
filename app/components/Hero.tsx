@@ -30,8 +30,8 @@ export default function Hero({ setShowGame, showGame }: HeroProps) {
   });
   return (
     <div className="world hero min-h-screen bg-base-200">
-      <div className="hero-content justify-start ">
-        <div className="absolute left-10 max-w-md space-y-1 md:space-y-2">
+      <div className="customHidden hero-content">
+        <div className="space-y-1 md:space-y-2">
           <div className="mb-1 flex space-x-2 text-xl md:mb-4 md:text-5xl">
             <span
               className="animate-wave cursor-pointer"
@@ -41,7 +41,7 @@ export default function Hero({ setShowGame, showGame }: HeroProps) {
             </span>
             <div className="animate-fade font-bold">{hello}</div>
           </div>
-          <div className="flex max-w-md whitespace-nowrap text-xl font-bold md:text-5xl">
+          <div className="flex w-96 max-w-md whitespace-nowrap text-xl font-bold md:text-5xl">
             <p className="mr-2">{`I'm`}</p>
             <Typewriter
               options={{
