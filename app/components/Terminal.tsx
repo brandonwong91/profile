@@ -77,16 +77,13 @@ export default function Terminal({ terminalInput }: TerminalProps) {
                     }
                   }}
                 />
-                <a href={"terminal"} hidden>
-                  {}
-                </a>
               </pre>
-              <button type="submit" className="kbd btn-accent mr-4 h-2">
+              {/* <button type="submit" className="kbd btn-accent mr-4 h-2">
                 Enter
                 <a href={"terminal"} hidden>
                   {}
                 </a>
-              </button>
+              </button> */}
             </div>
           </Form>
         </div>
