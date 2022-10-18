@@ -32,7 +32,7 @@ export default function Hero({ setShowGame, showGame }: HeroProps) {
     <div className="world hero min-h-screen bg-base-200">
       <div className="customHidden hero-content">
         <div className="space-y-1 md:space-y-2">
-          <div className="mb-1 flex space-x-2 text-xl md:mb-4 md:text-5xl">
+          <div className="mb-1 flex space-x-2 text-2xl md:mb-4 md:text-5xl">
             <span
               className="animate-wave cursor-pointer"
               data-set-theme="valentine"

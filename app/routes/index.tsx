@@ -12,6 +12,7 @@ import {
   SideDrawer,
 } from "~/components";
 import Game from "~/components/Game";
+import nlpjs from "~/bundle";
 
 export const action: ActionFunction = async ({ request }) => {
   const formData = await request.formData();
@@ -21,10 +22,33 @@ export const action: ActionFunction = async ({ request }) => {
 
 export default function Index() {
   const actionData = useActionData();
+  const [nlpResponse, setNlpResponse] = useState();
   useEffect(() => {
     themeChange(false);
     // 👆 false parameter is required for react project
   }, []);
+  useEffect(() => {
+    const setupNLP = async (corpus: any) => {
+      const container = nlpjs.containerBootstrap();
+      container.register("fs", nlpjs.fs);
+      container.use(nlpjs.Nlp);
+      container.use(nlpjs.LangEn);
+      const nlp = container.get("nlp");
+      nlp.settings.autoSave = false;
+      await nlp.addCorpus(corpus);
+      await nlp.train();
+      return nlp;
+    };
+    const fetchData = async () => {
+      const nlp = await setupNLP(
+        "https://raw.githubusercontent.com/jesus-seijas-sp/nlpjs-examples/master/01.quickstart/02.filecorpus/corpus-en.json"
+      );
+
+      const response = await nlp.process("en", actionData?.terminalInput);
+      setNlpResponse(response.answer);
+    };
+    fetchData().catch(console.error);
+  }, [actionData]);
   const [showGame, setShowGame] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -61,8 +85,17 @@ export default function Index() {
               <Terminal
                 terminalInput={
                   actionData
-                    ? { prefix: ">", text: actionData.terminalInput }
-                    : { prefix: "~", text: "--help for more" }
+                    ? [
+                        {
+                          prefix: ">",
+                          text: actionData.terminalInput,
+                        },
+                        {
+                          prefix: "🤖",
+                          text: nlpResponse,
+                        },
+                      ]
+                    : [{ prefix: "~", text: "--help for more" }]
                 }
               />
             </div>

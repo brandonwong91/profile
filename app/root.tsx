@@ -8,6 +8,9 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import styles from "~/styles/app.css";
+import { Helmet } from "react-helmet";
+import { useEffect } from "react";
+import nlpjs from "./bundle";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: styles }];

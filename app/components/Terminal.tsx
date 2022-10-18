@@ -2,7 +2,7 @@ import { Form } from "@remix-run/react";
 import { useEffect, useState } from "react";
 
 interface TerminalProps {
-  terminalInput: TerminalInput;
+  terminalInput: TerminalInput[];
 }
 
 interface TerminalInput {
@@ -14,8 +14,8 @@ export default function Terminal({ terminalInput }: TerminalProps) {
   const [userInput, setUserInput] = useState<TerminalInput[]>([]);
   const [userCursorCount, setUserCursorCount] = useState(1);
   useEffect(() => {
-    setUserInput([...userInput, terminalInput]);
-  }, [terminalInput.text]);
+    setUserInput([...userInput, ...terminalInput]);
+  }, [terminalInput[0].text]);
   return (
     <div className="hero min-h-screen bg-base-100">
       <div className="customHidden mockup-code m-10 border bg-primary text-primary-content">
@@ -78,12 +78,6 @@ export default function Terminal({ terminalInput }: TerminalProps) {
                   }}
                 />
               </pre>
-              {/* <button type="submit" className="kbd btn-accent mr-4 h-2">
-                Enter
-                <a href={"terminal"} hidden>
-                  {}
-                </a>
-              </button> */}
             </div>
           </Form>
         </div>
