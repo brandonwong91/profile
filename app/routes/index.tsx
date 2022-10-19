@@ -43,9 +43,9 @@ export default function Index() {
       const nlp = await setupNLP(
         "https://raw.githubusercontent.com/jesus-seijas-sp/nlpjs-examples/master/01.quickstart/02.filecorpus/corpus-en.json"
       );
-
       const response = await nlp.process("en", actionData?.terminalInput);
-      setNlpResponse(response.answer);
+
+      actionData?.terminalInput && setNlpResponse(response.answer);
     };
     fetchData().catch(console.error);
   }, [actionData]);
@@ -87,7 +87,7 @@ export default function Index() {
                   actionData
                     ? [
                         {
-                          prefix: ">",
+                          prefix: "👤",
                           text: actionData.terminalInput,
                         },
                         {

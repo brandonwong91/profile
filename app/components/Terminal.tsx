@@ -15,10 +15,10 @@ export default function Terminal({ terminalInput }: TerminalProps) {
   const [userCursorCount, setUserCursorCount] = useState(1);
   useEffect(() => {
     setUserInput([...userInput, ...terminalInput]);
-  }, [terminalInput[0].text]);
+  }, [terminalInput[terminalInput.length - 1].text]);
   return (
     <div className="hero min-h-screen bg-base-100">
-      <div className="customHidden mockup-code m-10 border bg-primary text-primary-content">
+      <div className="customHidden mockup-code m-10 border bg-primary text-primary-content sm:w-[20vw]">
         <div className="max-h-80 snap-y snap-proximity overflow-y-auto">
           <pre data-prefix="~">
             <code>Hello! Talk to me!</code>
@@ -29,9 +29,9 @@ export default function Terminal({ terminalInput }: TerminalProps) {
                 <pre
                   key={`${index}`}
                   data-prefix={`${input.prefix}`}
-                  className="snap-start"
+                  className="snap-start whitespace-normal"
                 >
-                  <code>{input.text}</code>
+                  <code>{`${input.text ? input.text : "AI starting..."}`}</code>
                 </pre>
               );
             })}

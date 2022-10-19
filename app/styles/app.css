@@ -2216,23 +2216,6 @@ html {
   border-radius: 0px;
 }
 
-.kbd {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-width: 1px;
-  border-color: hsl(var(--nf, var(--n)) / var(--tw-border-opacity));
-  --tw-border-opacity: 0.2;
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  border-radius: var(--rounded-btn, 0.5rem);
-  border-bottom-width: 2px;
-  min-height: 2.2em;
-  min-width: 2.2em;
-}
-
 .menu {
   display: flex;
   flex-direction: column;
@@ -2699,27 +2682,6 @@ html {
 .btn:focus-visible {
   outline: 2px solid hsl(var(--nf));
   outline-offset: 2px;
-}
-
-.btn-accent {
-  --tw-border-opacity: 1;
-  border-color: hsl(var(--a) / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--a) / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: hsl(var(--ac) / var(--tw-text-opacity));
-}
-
-.btn-accent:hover, 
-    .btn-accent.btn-active {
-  --tw-border-opacity: 1;
-  border-color: hsl(var(--af, var(--a)) / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--af, var(--a)) / var(--tw-bg-opacity));
-}
-
-.btn-accent:focus-visible {
-  outline: 2px solid hsl(var(--a));
 }
 
 .btn.glass:hover,
@@ -3855,10 +3817,6 @@ body[dir="rtl"] .checkbox:checked,
   display: grid;
 }
 
-.hidden {
-  display: none;
-}
-
 .h-12 {
   height: 3rem;
 }
@@ -3869,10 +3827,6 @@ body[dir="rtl"] .checkbox:checked,
 
 .h-36 {
   height: 9rem;
-}
-
-.h-2 {
-  height: 0.5rem;
 }
 
 .max-h-80 {
@@ -3929,6 +3883,10 @@ body[dir="rtl"] .checkbox:checked,
 
 .w-80 {
   width: 20rem;
+}
+
+.w-40 {
+  width: 10rem;
 }
 
 .max-w-md {
@@ -4311,6 +4269,10 @@ body[dir="rtl"] .checkbox:checked,
   overflow-y: auto;
 }
 
+.whitespace-normal {
+  white-space: normal;
+}
+
 .whitespace-nowrap {
   white-space: nowrap;
 }
@@ -4541,6 +4503,18 @@ body[dir="rtl"] .checkbox:checked,
 
   .sm\:w-80 {
     width: 20rem;
+  }
+
+  .sm\:w-10\/12 {
+    width: 83.333333%;
+  }
+
+  .sm\:w-\[40vw\] {
+    width: 40vw;
+  }
+
+  .sm\:w-\[20vw\] {
+    width: 20vw;
   }
 
   .sm\:grid-cols-3 {
