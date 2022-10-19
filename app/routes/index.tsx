@@ -10,6 +10,7 @@ import {
   Terminal,
   Quotes,
   SideDrawer,
+  Footer,
 } from "~/components";
 import Game from "~/components/Game";
 import nlpjs from "~/bundle";
@@ -101,6 +102,7 @@ export default function Index() {
             </div>
             {showGame && <Game />}
           </div>
+          <Footer />
         </div>
         <SideDrawer />
       </div>

@@ -77,7 +77,7 @@ export default function Experiences() {
         className="xs:ml-4 hero flex min-h-[100vh] flex-col justify-center bg-base-100 sm:mb-10"
         id="experiences"
       >
-        <h1 className="customHidden mb-10 self-center bg-gradient-to-tr from-primary to-secondary bg-clip-text text-6xl text-transparent sm:mt-10">
+        <h1 className="customHidden mb-10 self-center bg-gradient-to-tr from-primary to-secondary bg-clip-text text-6xl font-bold text-transparent sm:mt-10">
           {`Experiences`}
         </h1>
         <div className="customHidden md:flex md:flex-row">

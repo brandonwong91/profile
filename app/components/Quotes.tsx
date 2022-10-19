@@ -84,7 +84,7 @@ export default function Quotes() {
   return (
     <div className="hero flex min-h-[100vh] flex-col justify-center bg-base-200 sm:mb-10">
       <div>
-        <h1 className="customHidden hero-content bg-gradient-to-tr from-primary to-secondary bg-clip-text text-6xl text-transparent sm:text-5xl">
+        <h1 className="customHidden hero-content bg-gradient-to-tr from-primary to-secondary bg-clip-text text-6xl font-bold text-transparent sm:text-5xl">
           {`Favorite Quotes`}
         </h1>
         <div className="customHidden hero-content flex flex-col">
