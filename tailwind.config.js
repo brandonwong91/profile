@@ -21,9 +21,11 @@ module.exports = {
           "100%": { transform: "rotate(0.0deg)" },
         },
         fadeInOut: {
-          "0%": { opacity: 0 },
-          "50%": { opacity: 1 },
-          "100%": { opacity: 0 },
+          "0%": { opacity: 0, transform: "translateY(-25%)" },
+          "25%": { opacity: 0 },
+          "50%": { opacity: 1, transform: "translateY(0%)" },
+          "75%": { opacity: 1 },
+          "100%": { opacity: 0, transform: "translateY(25%)" },
         },
         fadeIn: {
           "0%": { opacity: "0", transform: "scale(1.03)" },
@@ -35,8 +37,8 @@ module.exports = {
         },
       },
       animation: {
-        wave: "wave 2.5s infinite",
-        fade: "fadeInOut 5s ease-in-out infinite",
+        wave: "wave 3s infinite",
+        fade: "fadeInOut 3s ease-in-out infinite",
       },
     },
   },

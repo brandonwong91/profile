@@ -19,14 +19,15 @@ export default function Hero({ setShowGame, showGame }: HeroProps) {
   const [hello, setHello] = useState(helloList[0]);
   const [index, setIndex] = useState(1);
   useEffect(() => {
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       if (index === helloList.length - 1) {
         setIndex(0);
       } else {
-        setIndex(index + 1);
+        setIndex((prev) => prev + 1);
       }
       setHello(helloList[index]);
-    }, 5 * 1000);
+    }, 3 * 1000);
+    return () => clearTimeout(timeout);
   });
   return (
     <div className="world hero min-h-screen bg-base-200">

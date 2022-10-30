@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="footer items-center bg-neutral p-4 text-neutral-content">
+    <footer className="footer items-center bg-base-200 p-4 text-neutral-content">
       <div className="grid-flow-col items-center">
         <p>Copyright © 2022 - All rights reserved</p>
       </div>
