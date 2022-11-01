@@ -4488,6 +4488,16 @@ body[dir="rtl"] .checkbox:checked,
   color: hsl(var(--pc) / var(--tw-text-opacity));
 }
 
+.text-success {
+  --tw-text-opacity: 1;
+  color: hsl(var(--su) / var(--tw-text-opacity));
+}
+
+.text-success-content {
+  --tw-text-opacity: 1;
+  color: hsl(var(--suc, var(--nc)) / var(--tw-text-opacity));
+}
+
 .opacity-50 {
   opacity: 0.5;
 }

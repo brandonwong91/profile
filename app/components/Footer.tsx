@@ -2,8 +2,11 @@ export default function Footer() {
   return (
     <footer className="footer items-center bg-base-200 p-4 text-neutral-content">
       <div className="grid-flow-col items-center">
-        <p>Copyright © 2022 - All rights reserved</p>
+        <p>Copyright © 2022 Brandon Wong. All rights reserved.</p>
       </div>
+      <code className="text-success">
+        Built with = [ Vercel , DaisyUI , NLP.js , Remix ]
+      </code>
       <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
         <a
           href={`BrandonWong_CV_2022q3.pdf`}

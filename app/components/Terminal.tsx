@@ -21,7 +21,7 @@ export default function Terminal({ terminalInput }: TerminalProps) {
       <div className="customHidden mockup-code m-10 border bg-primary text-primary-content sm:w-[20vw]">
         <div className="max-h-80 snap-y snap-proximity overflow-y-auto">
           <pre data-prefix="~">
-            <code>Hello! Talk to me!</code>
+            <code>Hello! I'm a robot 🤖</code>
           </pre>
           {userInput.length > 0 &&
             userInput.map((input, index) => {
