@@ -3849,6 +3849,10 @@ body[dir="rtl"] .checkbox:checked,
   height: 3rem;
 }
 
+.h-\[48px\] {
+  height: 48px;
+}
+
 .h-5 {
   height: 1.25rem;
 }
@@ -4013,56 +4017,70 @@ body[dir="rtl"] .checkbox:checked,
 @-webkit-keyframes fadeInOut {
   0% {
     opacity: 0;
-    transform: translateY(-25%);
+    transform: translateY(-400%);
   }
 
-  25% {
-    opacity: 0;
+  20% {
+    opacity: 1;
+    transform: translateY(-300%);
   }
 
-  50% {
+  40% {
+    opacity: 1;
+    transform: translateY(-200%);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(-100%);
+  }
+
+  80% {
     opacity: 1;
     transform: translateY(0%);
   }
 
-  75% {
-    opacity: 1;
-  }
-
   100% {
     opacity: 0;
-    transform: translateY(25%);
+    transform: translateY(0%);
   }
 }
 
 @keyframes fadeInOut {
   0% {
     opacity: 0;
-    transform: translateY(-25%);
+    transform: translateY(-400%);
   }
 
-  25% {
-    opacity: 0;
+  20% {
+    opacity: 1;
+    transform: translateY(-300%);
   }
 
-  50% {
+  40% {
+    opacity: 1;
+    transform: translateY(-200%);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(-100%);
+  }
+
+  80% {
     opacity: 1;
     transform: translateY(0%);
   }
 
-  75% {
-    opacity: 1;
-  }
-
   100% {
     opacity: 0;
-    transform: translateY(25%);
+    transform: translateY(0%);
   }
 }
 
 .animate-fade {
-  -webkit-animation: fadeInOut 3s ease-in-out infinite;
-          animation: fadeInOut 3s ease-in-out infinite;
+  -webkit-animation: fadeInOut 10s ease-in-out infinite;
+          animation: fadeInOut 10s ease-in-out infinite;
 }
 
 @-webkit-keyframes pulse {
@@ -4325,6 +4343,10 @@ body[dir="rtl"] .checkbox:checked,
 
 .overflow-y-auto {
   overflow-y: auto;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
 }
 
 .whitespace-normal {

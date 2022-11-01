@@ -21,11 +21,12 @@ module.exports = {
           "100%": { transform: "rotate(0.0deg)" },
         },
         fadeInOut: {
-          "0%": { opacity: 0, transform: "translateY(-25%)" },
-          "25%": { opacity: 0 },
-          "50%": { opacity: 1, transform: "translateY(0%)" },
-          "75%": { opacity: 1 },
-          "100%": { opacity: 0, transform: "translateY(25%)" },
+          "0%": { opacity: 0, transform: "translateY(-400%)" },
+          "20%": { opacity: 1, transform: "translateY(-300%)" },
+          "40%": { opacity: 1, transform: "translateY(-200%)" },
+          "60%": { opacity: 1, transform: "translateY(-100%)" },
+          "80%": { opacity: 1, transform: "translateY(0%)" },
+          "100%": { opacity: 0, transform: "translateY(0%)" },
         },
         fadeIn: {
           "0%": { opacity: "0", transform: "scale(1.03)" },
@@ -38,7 +39,7 @@ module.exports = {
       },
       animation: {
         wave: "wave 3s infinite",
-        fade: "fadeInOut 3s ease-in-out infinite",
+        fade: "fadeInOut 10s ease-in-out infinite",
       },
     },
   },

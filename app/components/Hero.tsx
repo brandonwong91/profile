@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import Typewriter from "typewriter-effect";
 interface HeroProps {
   showGame: boolean;
@@ -16,19 +15,6 @@ export default function Hero({ setShowGame, showGame }: HeroProps) {
     "MongoDB",
   ];
   const frameworkList = ["Vercel", "AWS", "GCP", "Docker"];
-  const [hello, setHello] = useState(helloList[0]);
-  const [index, setIndex] = useState(1);
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      if (index === helloList.length - 1) {
-        setIndex(0);
-      } else {
-        setIndex((prev) => prev + 1);
-      }
-      setHello(helloList[index]);
-    }, 3 * 1000);
-    return () => clearTimeout(timeout);
-  });
   return (
     <div className="world hero min-h-screen bg-base-200">
       <div className="customHidden hero-content">
@@ -40,7 +26,15 @@ export default function Hero({ setShowGame, showGame }: HeroProps) {
             >
               👋🏻
             </span>
-            <div className="animate-fade font-bold">{hello}</div>
+            <div className="h-[48px] flex-col overflow-y-hidden">
+              {helloList.reverse().map((word, index) => {
+                return (
+                  <div key={index} className="animate-fade  font-bold">
+                    {word}
+                  </div>
+                );
+              })}
+            </div>
           </div>
           <div className="flex w-96 max-w-md whitespace-nowrap text-xl font-bold md:text-5xl">
             <p className="mr-2">{`I'm`}</p>
