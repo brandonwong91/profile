@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .link-animation {
+    @apply relative cursor-pointer text-sm font-medium before:absolute before:bottom-[-2px] before:left-0 before:h-[2px] before:w-full before:origin-right before:scale-x-0 before:rounded-sm before:bg-primary before:transition-transform before:duration-300 before:ease-in-out before:content-[''] hover:before:origin-left hover:before:scale-x-100;
+  }
+}
+
 .ground {
   --left: 0;
   left: calc(var(--left) * 1%);
