@@ -26,7 +26,7 @@ export default function Hero({ setShowGame, showGame }: HeroProps) {
             >
               👋🏻
             </span>
-            <div className="h-[48px] flex-col overflow-y-hidden sm:h-[28px]">
+            <div className="flex-col overflow-y-hidden sm:h-[28px] md:h-[48px]">
               {helloList.reverse().map((word, index) => {
                 return (
                   <div key={index} className="animate-fade  font-bold">

@@ -4706,6 +4706,10 @@ body[dir="rtl"] .checkbox:checked,
     display: flex;
   }
 
+  .md\:h-\[48px\] {
+    height: 48px;
+  }
+
   .md\:min-h-\[21\.5rem\] {
     min-height: 21.5rem;
   }
