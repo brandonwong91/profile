@@ -2244,16 +2244,6 @@ html {
   border-radius: 0px;
 }
 
-.link-hover {
-  -webkit-text-decoration-line: none;
-  text-decoration-line: none;
-}
-
-.link-hover:hover {
-  -webkit-text-decoration-line: underline;
-  text-decoration-line: underline;
-}
-
 .menu {
   display: flex;
   flex-direction: column;
@@ -3881,10 +3871,6 @@ body[dir="rtl"] .checkbox:checked,
   margin-right: 1.5rem;
 }
 
-.inline {
-  display: inline;
-}
-
 .flex {
   display: flex;
 }
@@ -3895,10 +3881,6 @@ body[dir="rtl"] .checkbox:checked,
 
 .h-12 {
   height: 3rem;
-}
-
-.h-\[48px\] {
-  height: 48px;
 }
 
 .h-5 {
@@ -4344,10 +4326,6 @@ body[dir="rtl"] .checkbox:checked,
   flex-direction: column;
 }
 
-.flex-nowrap {
-  flex-wrap: nowrap;
-}
-
 .items-center {
   align-items: center;
 }
@@ -4540,6 +4518,11 @@ body[dir="rtl"] .checkbox:checked,
   color: hsl(var(--su) / var(--tw-text-opacity));
 }
 
+.text-info {
+  --tw-text-opacity: 1;
+  color: hsl(var(--in) / var(--tw-text-opacity));
+}
+
 .text-base-content {
   --tw-text-opacity: 1;
   color: hsl(var(--bc) / var(--tw-text-opacity));
@@ -4548,11 +4531,6 @@ body[dir="rtl"] .checkbox:checked,
 .text-primary-content {
   --tw-text-opacity: 1;
   color: hsl(var(--pc) / var(--tw-text-opacity));
-}
-
-.text-info {
-  --tw-text-opacity: 1;
-  color: hsl(var(--in) / var(--tw-text-opacity));
 }
 
 .opacity-50 {
@@ -4679,16 +4657,8 @@ body[dir="rtl"] .checkbox:checked,
     align-items: center;
   }
 
-  .sm\:justify-center {
-    justify-content: center;
-  }
-
   .sm\:gap-y-2 {
     row-gap: 0.5rem;
-  }
-
-  .sm\:self-center {
-    align-self: center;
   }
 
   .sm\:text-5xl {

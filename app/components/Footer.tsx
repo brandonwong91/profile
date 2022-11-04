@@ -11,7 +11,7 @@ export default function Footer() {
         <p>Copyright © 2022 Brandon Wong. All rights reserved.</p>
       </div>
       <code className="flex text-success">
-        Built = [{" "}
+        BuiltWith = [{" "}
         <div className="flex gap-x-2">
           {techList.map((tech, index) => {
             return (
@@ -35,7 +35,7 @@ export default function Footer() {
           rel="noreferrer"
         >
           <div className="w-8 hover:scale-110">
-            <img src={`img/icons8-resume-50.png`} alt={""} />
+            <img src={`img/icons8-resume-50-1.png`} alt={""} />
           </div>
         </a>
         <a
