@@ -2,8 +2,8 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 export default function NavBar() {
   return (
-    <div className="navbar sticky top-0 z-[9000] backdrop-blur-sm">
-      <div className="flex-1 justify-between">
+    <div className="sticky left-[25vw] top-8 z-[9000] -mt-12 w-[50vw] justify-self-center rounded-xl bg-none shadow-sm backdrop-blur-sm sm:left-[12.5vw] sm:w-[75vw]">
+      <div className="flex justify-between bg-none">
         <div
           className="btn btn-ghost text-xl normal-case"
           onClick={() => location.reload()}
@@ -14,7 +14,7 @@ export default function NavBar() {
         </div>
         <label
           htmlFor="my-drawer-4"
-          className="btn swap btn-ghost drawer-button hover:swap-rotate"
+          className="drawer-button btn swap btn-ghost hover:swap-rotate"
         >
           <MenuIcon className="swap-off h-5 w-5" />
           <XIcon className="swap-on h-5 w-5" />

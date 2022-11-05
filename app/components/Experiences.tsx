@@ -74,19 +74,19 @@ export default function Experiences() {
   return (
     <>
       <div
-        className="xs:ml-4 hero flex min-h-[100vh] flex-col justify-center bg-base-100 sm:mb-10"
+        className="xs:ml-4 hero flex min-h-[100vh] flex-col justify-center bg-gradient-to-tr from-secondary to-transparent"
         id="experiences"
       >
-        <h1 className="customHidden mb-10 self-center bg-gradient-to-tr from-primary to-secondary bg-clip-text text-6xl font-bold text-transparent sm:mt-10">
+        <h1 className="customHidden self-center bg-gradient-to-tr from-primary to-secondary bg-clip-text text-6xl font-bold text-transparent sm:mt-5">
           {`Experiences`}
         </h1>
-        <div className="customHidden md:flex md:flex-row">
+        <div className="customHidden pb-10 sm:pt-10 md:flex md:flex-row">
           <ul className="menu grid bg-base-100 sm:grid-cols-3 md:w-48 md:grid-cols-1">
             {companies.map((company) => {
               return (
                 <li
                   className={clsx({
-                    "bg-gradient-to-tr from-primary to-accent":
+                    "bg-gradient-to-tr from-primary to-transparent":
                       selected.name === company.name,
                   })}
                   key={company.name}
@@ -97,7 +97,7 @@ export default function Experiences() {
               );
             })}
           </ul>
-          <div className="card image-full bg-base-100 shadow-xl sm:h-80 sm:w-80 md:min-h-[21.5rem] md:w-96">
+          <div className="customHidden card image-full bg-base-100 shadow-xl sm:h-80 sm:w-80 md:min-h-[21.5rem] md:w-96 ">
             {/* <figure>
             <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
           </figure> */}

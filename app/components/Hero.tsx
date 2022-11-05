@@ -16,7 +16,7 @@ export default function Hero({ setShowGame, showGame }: HeroProps) {
   ];
   const frameworkList = ["Vercel", "AWS", "GCP", "Docker"];
   return (
-    <div className="world hero min-h-screen bg-base-200">
+    <div className="world hero min-h-screen bg-gradient-to-tr from-primary to-transparent">
       <div className="customHidden hero-content">
         <div className="space-y-1 md:space-y-2">
           <div className="mb-1 flex space-x-2 text-2xl md:mb-4 md:text-5xl">

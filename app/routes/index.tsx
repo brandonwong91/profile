@@ -75,7 +75,6 @@ export default function Index() {
             <div id={"hero"}>
               <Hero setShowGame={setShowGame} showGame={showGame} />
             </div>
-
             <div id={"experiences"}>
               <Experiences />
             </div>

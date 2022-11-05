@@ -6,10 +6,10 @@ export default function SideDrawer() {
       <label htmlFor="my-drawer-4" className="drawer-overlay"></label>
 
       <ul className="menu w-80 overflow-y-auto bg-base-100 p-4 text-base-content">
-        <label className="swap-rotate swap my-4">
+        <label className="swap swap-rotate my-4">
           <input type="checkbox" />
           <SunIcon data-set-theme="pastel" className="swap-on h-5 w-5" />
-          <MoonIcon data-set-theme="dark" className="swap-off h-5 w-5" />
+          <MoonIcon data-set-theme="night" className="swap-off h-5 w-5" />
         </label>
         <li>
           <a href="#hero">Me</a>
