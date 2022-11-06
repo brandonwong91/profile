@@ -17,7 +17,7 @@ export default function Terminal({ terminalInput }: TerminalProps) {
     setUserInput([...userInput, ...terminalInput]);
   }, [terminalInput[terminalInput.length - 1].text]);
   return (
-    <div className="hero min-h-screen bg-base-100">
+    <div className="hero min-h-screen bg-gradient-to-br from-neutral-focus to-base-100">
       <div className="customHidden mockup-code m-10 border bg-primary text-primary-content sm:w-[20vw]">
         <div className="max-h-80 snap-y snap-proximity overflow-y-auto">
           <pre data-prefix="~">

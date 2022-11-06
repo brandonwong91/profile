@@ -19,14 +19,14 @@ export default function Hero({ setShowGame, showGame }: HeroProps) {
     <div className="world hero min-h-screen bg-gradient-to-tr from-primary to-transparent">
       <div className="customHidden hero-content">
         <div className="space-y-1 md:space-y-2">
-          <div className="mb-1 flex space-x-2 text-2xl md:mb-4 md:text-5xl">
+          <div className="mb-1 flex space-x-2 text-4xl md:mb-4 md:text-5xl">
             <span
               className="animate-wave cursor-pointer"
               data-set-theme="valentine"
             >
               👋🏻
             </span>
-            <div className="flex-col overflow-y-hidden sm:h-[28px] md:h-[48px]">
+            <div className="flex-col overflow-y-hidden sm:h-[38px] md:h-[48px]">
               {helloList.reverse().map((word, index) => {
                 return (
                   <div key={index} className="animate-fade  font-bold">
@@ -36,7 +36,7 @@ export default function Hero({ setShowGame, showGame }: HeroProps) {
               })}
             </div>
           </div>
-          <div className="flex w-96 max-w-md whitespace-nowrap text-xl font-bold md:text-5xl">
+          <div className="flex w-96 max-w-md whitespace-nowrap text-2xl font-bold md:text-5xl">
             <p className="mr-2">{`I'm`}</p>
             <Typewriter
               options={{
@@ -63,6 +63,20 @@ export default function Hero({ setShowGame, showGame }: HeroProps) {
               👾
             </div>
           </div>
+          <p className="">
+            Currently building engineering solutions at{" "}
+            <a
+              className="link-animation text-lg text-success"
+              href={"https://www.trustana.com/"}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Trustana
+            </a>
+            <br />
+            Delivering effective user experiences and performant services at
+            scale.
+          </p>
           <div className="w-72">
             <div className="animate-[fadeIn_3s_ease-in]">
               {skillList.map((item) => {

@@ -6,6 +6,7 @@ export default function NavBar() {
       <div className="flex justify-between bg-none">
         <div
           className="btn btn-ghost text-xl normal-case"
+          data-set-theme="night"
           onClick={() => location.reload()}
         >
           <div className="w-6 hover:scale-150">

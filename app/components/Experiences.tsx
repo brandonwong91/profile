@@ -97,7 +97,7 @@ export default function Experiences() {
               );
             })}
           </ul>
-          <div className="customHidden card image-full bg-base-100 shadow-xl sm:h-80 sm:w-80 md:min-h-[21.5rem] md:w-96 ">
+          <div className="customHidden card image-full bg-base-100 shadow-xl sm:h-80 sm:w-80 md:min-h-[21.5rem] md:w-96">
             {/* <figure>
             <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
           </figure> */}
