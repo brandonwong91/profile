@@ -112,7 +112,7 @@ export default function Experiences() {
               );
             })}
           </ul>
-          <div className="customHidden card image-full card-side bg-base-100 shadow-xl sm:h-80 sm:w-80 md:min-h-[28rem] md:w-96">
+          <div className="customHidden card image-full bg-base-100 shadow-xl sm:h-[26rem] sm:w-80 md:min-h-[28rem] md:w-96">
             <figure className="opacity-20">
               <img src={selected.image} alt="Shoes" />
             </figure>
