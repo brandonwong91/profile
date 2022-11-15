@@ -8,12 +8,6 @@ export default function SideDrawer() {
 
       <ul className="menu w-60 overflow-y-auto bg-base-100 p-4 text-base-content">
         <div className="flex flex-col justify-center">
-          {/* <label className="swap swap-rotate my-4">
-              <input type="checkbox" />
-              <SunIcon data-set-theme="pastel" className="swap-on h-5 w-5" />
-              <MoonIcon data-set-theme="night" className="swap-off h-5 w-5" />
-            </label> */}
-
           <div className="flex justify-start gap-x-4 px-4 py-2">
             <ContactIcons />
           </div>

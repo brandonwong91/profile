@@ -1,4 +1,5 @@
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import ContactIcons from "./ContactIcons";
 
 export default function NavBar() {
   return (
@@ -13,13 +14,45 @@ export default function NavBar() {
             <img src={`img/favicon.ico`} alt={""} />
           </div>
         </div>
-        <label
-          htmlFor="my-drawer-4"
-          className="drawer-button btn swap btn-ghost hover:swap-rotate"
+        <div className="dropdown-end dropdown">
+          {/* <label tabIndex={0} className="avatar btn btn-ghost btn-circle">
+            <MenuIcon className="swap-off h-5 w-5" />
+          </label> */}
+          <label className="swap-rotate btn swap btn-ghost btn-circle">
+            <input type="checkbox" />
+            <MenuIcon className="swap-off h-5 w-5" />
+            <XIcon className="swap-on h-5 w-5" />
+          </label>
+          <ul
+            tabIndex={0}
+            className="dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-transparent p-2 shadow"
+          >
+            <li>
+              <div className="flex justify-start gap-x-4 px-4 py-2">
+                <ContactIcons />
+              </div>
+            </li>
+            <li>
+              <a href="#hero">About me</a>
+            </li>
+            <li>
+              <a href="#experiences">Experiences</a>
+            </li>
+            <li>
+              <a href="#quotes">Favourite quotes</a>
+            </li>
+            <li>
+              <a href="#terminal">Talk to the robot</a>
+            </li>
+          </ul>
+        </div>
+        {/* <label
+          // htmlFor="my-drawer-4"
+          className="swap-rotate btn swap btn-ghost drawer-button"
         >
           <MenuIcon className="swap-off h-5 w-5" />
           <XIcon className="swap-on h-5 w-5" />
-        </label>
+        </label> */}
       </div>
     </div>
   );

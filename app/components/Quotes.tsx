@@ -80,7 +80,17 @@ export default function Quotes() {
     // });
     return () => clearTimeout(timer);
   }, [selected]);
-
+  const [scrollPosition, setScrollPosition] = useState(0);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
+  console.log(`scroll inside`, scrollPosition, (scrollPosition - 1800) * 3);
   return (
     <div className="hero flex min-h-[100vh] flex-col justify-center bg-gradient-to-tr from-accent sm:pb-10">
       <div>
@@ -88,7 +98,7 @@ export default function Quotes() {
           {`Favorite Quotes`}
         </h1>
         <div className="customHidden hero-content flex flex-col">
-          <div className="mt-2 flex cursor-pointer flex-row gap-x-1 self-center">
+          {/* <div className="mt-2 flex cursor-pointer flex-row gap-x-1 self-center">
             {quotes.map((quote, index) => {
               return (
                 <div
@@ -106,8 +116,8 @@ export default function Quotes() {
                 </div>
               );
             })}
-          </div>
-          <div className="flex w-full flex-row">
+          </div> */}
+          {/* <div className="flex w-full flex-row">
             <div
               className="self-middle btn btn-circle btn-sm z-10"
               onClick={() => {
@@ -138,6 +148,36 @@ export default function Quotes() {
             >
               ❯
             </div>
+          </div> */}
+          <div
+            className={
+              "showHidden flex w-96 flex-row gap-x-4 overflow-hidden p-4"
+            }
+          >
+            {quotes.map((quote, index) => {
+              return (
+                <div
+                  key={`${index}`}
+                  className={clsx(
+                    "card rounded-box card-normal flex h-40 min-w-[360px] translate-x-[900px] bg-primary-content p-4"
+                  )}
+                  style={{
+                    transform: `translateX(-${
+                      scrollPosition > 1900
+                        ? scrollPosition > 2200
+                          ? 1510
+                          : (scrollPosition - 1900) * 5
+                        : 0
+                    }px)`,
+                  }}
+                >
+                  <div className="px-4 pt-4 italic">{quote.text}</div>
+                  <div className="flex justify-end gap-x-2 pr-4 text-end text-sm">
+                    {quote.by} {quote.icon}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

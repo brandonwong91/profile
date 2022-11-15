@@ -24,9 +24,17 @@ export const action: ActionFunction = async ({ request }) => {
 export default function Index() {
   const actionData = useActionData();
   const [nlpResponse, setNlpResponse] = useState();
+  const [scrollPosition, setScrollPosition] = useState(0);
   useEffect(() => {
     themeChange(false);
     // 👆 false parameter is required for react project
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
   useEffect(() => {
     const setupNLP = async (corpus: any) => {
@@ -56,6 +64,13 @@ export default function Index() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("customShow");
+          // console.log(`entry`, entry.target);
+          // if (entry.target.hasAttribute("scrollRightWhenDown")) {
+          //   console.log(`scrollRightWhenDown`, scrollPosition);
+          //   entry.target.classList.add(
+          //     `translate-x-[-${(scrollPosition - 1200) * 2}rem}]`
+          //   );
+          // }
         } else {
           entry.target.classList.remove("customShow");
         }
@@ -64,10 +79,10 @@ export default function Index() {
     const hiddenElements = document.querySelectorAll(".customHidden");
     hiddenElements.forEach((element) => observer.observe(element));
   });
-
+  console.log("scroll position", scrollPosition, (scrollPosition - 1200) * 10);
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <div className="drawer drawer-end">
+      {/* <div className="drawer drawer-end">
         <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content">
           <NavBar />
@@ -104,6 +119,40 @@ export default function Index() {
           <Footer />
         </div>
         <SideDrawer />
+      </div> */}
+      <div className="">
+        <NavBar />
+        <div>
+          <div id={"hero"}>
+            <Hero setShowGame={setShowGame} showGame={showGame} />
+          </div>
+          <div id={"experiences"}>
+            <Experiences />
+          </div>
+          <div id={"quotes"}>
+            <Quotes />
+          </div>
+          <div id={"terminal"}>
+            <Terminal
+              terminalInput={
+                actionData
+                  ? [
+                      {
+                        prefix: "👤",
+                        text: actionData.terminalInput,
+                      },
+                      {
+                        prefix: "🤖",
+                        text: nlpResponse,
+                      },
+                    ]
+                  : [{ prefix: "~", text: "--help for more" }]
+              }
+            />
+          </div>
+          {showGame && <Game />}
+        </div>
+        <Footer />
       </div>
     </div>
   );
