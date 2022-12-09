@@ -94,7 +94,7 @@ export default function Experiences() {
         <h1 className="customHidden self-center bg-gradient-to-tr from-primary to-secondary bg-clip-text text-6xl font-bold text-transparent sm:mt-5">
           {`Experiences`}
         </h1>
-        <div className="customHidden pb-10 sm:pt-10 lg:flex lg:flex-row">
+        <div className="customHidden pb-10 sm:pt-10 lg:flex lg:flex-row lg:pl-28">
           <ul className="customHidden steps steps-horizontal w-[20rem] gap-x-4 overflow-x-auto pb-4 md:w-96 lg:steps-vertical lg:max-w-fit lg:pr-4">
             {companies.map((company) => {
               return (
