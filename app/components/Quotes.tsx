@@ -48,6 +48,15 @@ export default function Quotes() {
         </div>
       ),
     },
+    {
+      text: "If you tell the truth, you don't have to remember anything.",
+      by: "Mark Twain",
+      icon: (
+        <div className="w-4">
+          <img src={`img/icons8-game-of-thrones-32.png`} alt={""} />
+        </div>
+      ),
+    },
   ];
 
   const [transitionParameters, setTransitionParameters] = useState({
@@ -55,7 +64,7 @@ export default function Quotes() {
     end: 2200,
     default: 1510,
     scale: 5,
-    difference: 390,
+    difference: 300,
   });
 
   const mobileScreen = "(max-width: 440px)";
@@ -129,7 +138,7 @@ export default function Quotes() {
         <div className="customHidden hero-content flex flex-col">
           <div
             className={
-              "showHidden flex w-96 flex-row gap-x-4 overflow-hidden p-4"
+              "showHidden flex flex-row gap-x-4 overflow-hidden p-4 sm:w-96 md:w-[768px]"
             }
           >
             {quotes.map((quote, index) => {
@@ -138,7 +147,7 @@ export default function Quotes() {
           </div>
           <div
             className={
-              "showHidden flex w-96 flex-row gap-x-4 overflow-hidden p-4"
+              "showHidden flex  w-96 flex-row gap-x-4 overflow-hidden p-4 md:w-[768px]"
             }
           >
             {quotes.map((quote, index) => {
