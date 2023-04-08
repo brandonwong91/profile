@@ -2,7 +2,7 @@ function ContactIcons() {
   return (
     <>
       <a
-        href={`BrandonWong_CV_2022q3.pdf`}
+        href={`BrandonWong_CV_2023q1.pdf`}
         download
         target="_blank"
         rel="noreferrer"
