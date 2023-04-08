@@ -5,3 +5,4 @@ export { default as NavBar } from "./NavBar";
 export { default as Quotes } from "./Quotes";
 export { default as SideDrawer } from "./SideDrawer";
 export { default as Terminal } from "./Terminal";
+export { default as GameModal } from "./GameModal";

@@ -15,9 +15,6 @@ export default function NavBar() {
           </div>
         </div>
         <div className="dropdown-end dropdown">
-          {/* <label tabIndex={0} className="avatar btn btn-ghost btn-circle">
-            <MenuIcon className="swap-off h-5 w-5" />
-          </label> */}
           <label className="swap-rotate btn swap btn-ghost btn-circle">
             <input type="checkbox" />
             <MenuIcon className="swap-off h-5 w-5" />
@@ -46,13 +43,6 @@ export default function NavBar() {
             </li>
           </ul>
         </div>
-        {/* <label
-          // htmlFor="my-drawer-4"
-          className="swap-rotate btn swap btn-ghost drawer-button"
-        >
-          <MenuIcon className="swap-off h-5 w-5" />
-          <XIcon className="swap-on h-5 w-5" />
-        </label> */}
       </div>
     </div>
   );

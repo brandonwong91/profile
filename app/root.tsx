@@ -8,9 +8,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import styles from "~/styles/app.css";
-import { Helmet } from "react-helmet";
-import { useEffect } from "react";
-import nlpjs from "./bundle";
+import { GameModal } from "./components";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: styles }];
@@ -34,6 +32,7 @@ export default function App() {
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+        <GameModal />
       </body>
     </html>
   );

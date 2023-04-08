@@ -1,9 +1,5 @@
 import Typewriter from "typewriter-effect";
-interface HeroProps {
-  showGame: boolean;
-  setShowGame: (val: boolean) => void;
-}
-export default function Hero({ setShowGame, showGame }: HeroProps) {
+export default function Hero() {
   const helloList = ["Hello", "你好", "안녕하세요", "はじめまして"];
   const skillList = ["Typescript", "Golang", "Python"];
   const toolList = [
@@ -22,7 +18,7 @@ export default function Hero({ setShowGame, showGame }: HeroProps) {
           <div className="mb-1 flex space-x-2 text-4xl md:mb-4 md:text-5xl">
             <span
               className="animate-wave cursor-pointer"
-              data-set-theme="valentine"
+              data-set-theme="light"
             >
               👋🏻
             </span>
@@ -48,19 +44,10 @@ export default function Hero({ setShowGame, showGame }: HeroProps) {
           </div>
           <div className="flex gap-x-1">
             I turn
-            <div
-              data-set-theme="coffee"
-              className="animate-pulse cursor-pointer"
-            >
-              ☕️
-            </div>
+            <div className="animate-pulse">☕️</div>
             into
-            <div
-              data-set-theme="retro"
-              className="animate-bounce cursor-pointer"
-              onClick={() => setShowGame(!showGame)}
-            >
-              👾
+            <div className="animate-bounce cursor-pointer">
+              <label htmlFor="game-modal">👾</label>
             </div>
           </div>
           <p className="">
